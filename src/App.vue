@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="container mt-10">
+    <div class="container my-10">
       <div class="row">
         <div class="col-xl-6 col-lg-8 col-md-10 mx-auto">
          <h1>Сколько весит конверт</h1>
