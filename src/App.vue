@@ -3,7 +3,7 @@
     <div class="container my-10">
       <div class="row">
         <div class="col-xl-6 col-lg-8 col-md-10 mx-auto">
-         <h1>Сколько весит конверт</h1>
+         <h1 class="h2">Сколько весит конверт</h1>
           <p class="text-secondary">Если на конверт нанесена литера А (такие конверты обычно называют маркированные), то в его стоимость уже входит вес 20 гр.</p>
           <b-form-group label="Маркировка на конверте">
             <b-form-radio v-model="isMarked" aria-describedby="ariaDescribedby" name="marked" :value="true">Маркированный</b-form-radio>
@@ -25,7 +25,7 @@
           <div class="mt-10 p-4 bg-light rounded">
             <b-link v-b-toggle="'collapse'" class="mb-4">Как производится рассчет?</b-link>
             <!-- Element to collapse -->
-            <b-collapse id="collapse">
+            <b-collapse id="collapse" class="pt-4">
               <p>Все веса конвертов и напечатанных листов бумаги округлены в большую сторону до целого числа.</p>
               <ul>
                 <li>Конверт E65 (евроконверт) весит 5 гр.</li>
