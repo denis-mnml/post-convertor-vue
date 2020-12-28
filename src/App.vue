@@ -1,6 +1,6 @@
 <template>
-  <div id="app" class="h-100">
-    <div class="container d-flex flex-column pt-10 pb-6 h-100">
+  <div id="app" class="mh-100">
+    <div class="container d-flex flex-column pt-10 pb-6 mh-100">
       <div class="row">
         <div class="col-xl-6 col-lg-8 col-md-10 mx-auto">
           <h1 class="h2">Сколько весит конверт</h1>
