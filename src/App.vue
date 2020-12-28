@@ -7,7 +7,7 @@
           <p class="text-secondary small">Если на конверт нанесена литера А (такие конверты обычно называют
             маркированные), то
             в его стоимость уже входит вес 20 гр.</p>
-          <b-form-group label="Маркировка на конверте" class="mb-6">
+          <b-form-group label="Маркированный конверт?" class="mb-6">
             <b-form-radio v-model="isMarked" name="marked" :value="true">Маркированный</b-form-radio>
             <b-form-radio v-model="isMarked" name="marked" :value="false">Не маркированный</b-form-radio>
           </b-form-group>
