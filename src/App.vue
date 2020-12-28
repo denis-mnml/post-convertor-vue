@@ -13,8 +13,8 @@
           <b-form-group label="Тип конверта">
             <div class="d-flex flex-wrap">
               <label class="envelope-radio h-100" v-for="item in envelopsOptions" :key="item.value">
-                <input type="radio" name="envelope" class="envelope-radio__input" :value="item.value"
-                       :checked="item.value === envelopWeight">
+                <input type="radio" name="envelope" v-model="envelopWeight" class="envelope-radio__input" :value="item.value"
+                       :checked="item.value === envelopWeight" @change="calc">
                 <span class="envelope-radio__label">
                   <img :src="item.src" class="envelope-radio__img" :alt="'Конверт ' + item.text">
                   <h6 class="m-0">{{item.text}}</h6>
@@ -71,9 +71,9 @@
         weight: 0,
         isMarked: true,
         envelopsOptions: [
-          { value: 5, text: 'E65', desc: 'А4 сложен втрое, вес 5 гр.', src: 'img/e65.svg' },
-          { value: 7, text: 'C5', desc: 'А4 сложен вдвое, вес 7 гр.', src: 'img/c5.svg' },
-          { value: 17, text: 'C4', desc: 'А4 целиком, вес 17гр.', src: 'img/c4.svg' },
+          { value: 5, text: 'E65', desc: 'Размер: А4 сложен втрое', src: 'img/e65.svg' },
+          { value: 7, text: 'C5', desc: 'Размер: А4 сложен вдвое', src: 'img/c5.svg' },
+          { value: 17, text: 'C4', desc: 'Размер: А4 целиком', src: 'img/c4.svg' },
         ],
         totalStamps: 0,
         sheetsCount: 0,
@@ -86,15 +86,12 @@
     },
     methods: {
       calc() {
-        if(this.sheetsCount && this.envelopWeight) {
-          this.totalWeight = this.sheetsCount * this.sheetWeight + this.envelopWeight;
+        this.totalWeight = this.sheetsCount * this.sheetWeight + this.envelopWeight;
 
-          if(this.totalWeight > this.stepWeight) {
-            const number = Math.ceil((this.totalWeight - 20) / this.stepWeight);
-            console.log((this.totalWeight - 20) / this.stepWeight);
+        if(this.totalWeight > this.stepWeight) {
+          const steps = Math.ceil((this.totalWeight - 20) / this.stepWeight);
 
-            this.totalStamps = number * this.stepPrice;
-          }
+          this.totalStamps = steps * this.stepPrice;
         }
       }
     }
