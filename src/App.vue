@@ -17,7 +17,7 @@
                        :checked="item.value === envelopWeight">
                 <span class="envelope-radio__label">
                   <img :src="item.src" class="envelope-radio__img" :alt="'Конверт ' + item.text">
-                  <h6 class="m-0 mr-2">{{item.text}}</h6>
+                  <h6 class="m-0">{{item.text}}</h6>
                   <span class="envelope-radio__help" v-b-tooltip.hover :title="item.desc">?</span>
                 </span>
               </label>
@@ -32,7 +32,7 @@
             <h6><span class="text-secondary">Номинал марок:</span> {{totalStamps ? totalStamps + ' коп.' :
               'дополнительные марки не нужны'}}</h6>
           </div>
-          <div class="mt-10 p-4 bg-light rounded">
+          <div class="mt-10 p-4 bg-accent-50 rounded">
             <b-link v-b-toggle="'collapse'" class="mb-4">Как производится рассчет?</b-link>
             <!-- Element to collapse -->
             <b-collapse id="collapse" class="pt-4">
