@@ -2,8 +2,11 @@
 	width: 98px
 	height: 98px
 	display: block
+	transition: .1s
 	& + .envelope-radio
 		margin-left: 12px
+	&:active
+		transform: scale(.98)
 	&__input
 		display: none
 		&:checked
