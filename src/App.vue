@@ -61,7 +61,7 @@
           </div>
         </div>
       </div>
-      <div class="mt-10 mt-md-auto text-center">
+      <div class="mt-10 text-center">
         <a href="http://mnml.by" target="_blank" class="small">by Denis Minimal</a>
       </div>
     </div>
